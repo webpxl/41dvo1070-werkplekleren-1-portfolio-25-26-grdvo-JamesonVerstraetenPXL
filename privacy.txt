@@ -1,0 +1,10 @@
+Privacybeleid - WPL1 Portfolio
+Naam: Jameson Verstraeten
+Opleiding: Graduaat Programmeren / PXL
+
+Dit portfolio is een schoolopdracht voor het vak Werkplekleren 1 (WPL1). 
+1. Gegevensverzameling: Deze website verzamelt geen persoonlijke gegevens van bezoekers. 
+Er wordt geen gebruik gemaakt van cookies of contactformulieren die data opslaan.
+2. Hosting: De website wordt gehost via [GitHub Pages / Netlify]. 
+Raadpleeg hun privacybeleid voor informatie over server-logs.
+3. Rechten van afbeeldingen: Alle gebruikte afbeeldingen zijn ofwel zelfgemaakt, ofwel verkregen via rechtenvrije bronnen (zoals Unsplash/Pexels).
