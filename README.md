@@ -6,8 +6,8 @@ Officiële portfolio voor WPL1.
 ## Gebruikte Tools & Bronnen
 - **Editor:** Visual Studio Code
 - **AI Tool:** Gemini, Github co-pilot
-**Gemini:** Privacy.txt inhoud
-**Github co-pilot:** 
+**Gemini:** Privacy.txt inhoud, Opmaak README, adoptatie kleuren palette van dashboard design, veel hulp bij descriptions voor meer professionelere zinsvorming en structuur (Vooral gebruikt bij featured projects descriptions), 
+**Github co-pilot:** Css styling hulp
 - **Frameworks:** Geen (Plain HTML/CSS/JS)
 - **Bronnen:** 
 

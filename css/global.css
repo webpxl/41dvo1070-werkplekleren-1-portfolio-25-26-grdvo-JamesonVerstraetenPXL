@@ -1,19 +1,67 @@
+/* Fonts (Lora & Mulish) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Mulish:wght@400;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Background */
+    --bg-color: #1E1B29;
+    --glass-bg: rgba(43, 38, 59, 0.7);
+    --glass-border: rgba(54, 48, 69, 0.5);
+
+    /* Accent */
+    --primary: #BB86FC;
+    --accent: #FF7597;
+    
+    /* Text */
+    --text-white: #FDFCFE;
+    --text-grey: #B3B0BE;
+    
+    /* Font */
+    --font-head: 'Lora', serif;
+    --font-body: 'Mulish', sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    overflow-x: hidden; 
 }
 
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    font-family: var(--font-body);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
     flex: 1;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent);
 }

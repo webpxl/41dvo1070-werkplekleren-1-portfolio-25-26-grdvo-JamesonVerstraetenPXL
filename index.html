@@ -6,21 +6,222 @@
         <title>Title</title>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/project-card.css">
+        <link rel="stylesheet" href="css/modal.css">
     </head>
     <body>
         <header></header>
         <main>
             <p>home</p>
+
             <section id="about">
 
             </section>
-            <section id="projects">
 
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="card-header">
+                            <span class="tag purple">School Project</span>
+                            <span class="tag-date">WPL1</span>
+                        </div>
+                        <h3>Student CV Dashboard</h3>
+                        <p class="project-desc">A "Dark Purple Cozy" productivity dashboard design to help me track my necessities and daily life.</p>
+                        <div class="project-meta">
+                            <strong>My Role:</strong> UI Designer<br>
+                            <strong>Tech:</strong> Figma & Trello<br>
+                            <strong>Outcome:</strong> A semi-responsive grid layout with glassmorphism effects.
+                        </div>
+
+                        <button class="details-btn">View Details</button>
+
+                        <div class="project-details-source" style="display: none;">
+                            <h2>Student CV Dashboard</h2>
+                            <img src="/images/CV Dashboard.png" class="modal-img" alt="Dashboard Preview">
+
+                            <h4>The Concept</h4>
+                            <p>A "Work Place Learning" assignment aimed to move beyond the static paper resume and design a Dashboard CV that reflects my professional identity. My goal was to incorporate my design and create a "Dark Cozy Purple" interface that feels personal and cozy.</p>
+
+                            <h4>The Process (Iterative Design)</h4>
+                            <p><strong>I followed a strict 4-stage design cycle:</strong></p>
+                            <ol>
+                                <li><strong>Research & Sketches:</strong> Analyzing dashboard layouts and sketching on paper.</li>
+                                <li><strong>Wireframing:</strong> Building the structural layout in Figma to establish visual hierarchy.</li>
+                                <li><strong>Visual Design:</strong> Applying my "Dark Cozy Purple" moodboard, selecting the Lora/Mulish typography, and defining the glassmorphism style.</li>
+                                <li><strong>Feedback Loops:</strong> Worked in a "Buddy Team," processing weekly peer feedback to refine the usability and aesthetics of the final concept.</li>
+                            </ol>
+
+                            <h4>What I Designed (Figma Workflow)</h4>
+                            <p><strong>Design System:</strong> Created a scalable global style guide including:</p>
+                            <ul>
+                                <li><strong>Color Styles:</strong> Defined colors.</li>
+                                <li><strong>Typography:</strong> A strict type scale using Lora (Headings) and Mulish (UI text).</li>
+                                <li><strong>Effect Styles:</strong> Custom "Glass Morphism" effects saved as reusable styles.</li>
+                            </ul>
+                        
+                            <p><strong>Component Architecture:</strong></p>
+                            <ul>
+                                <li>Built small components (Buttons, Tags, Icons) combined into larger components (Calendar Cards, Music Player, Kanban Columns).</li>
+                                <li>Consistent spacing and padding within modules.</li>
+                                <li>Created Component Variants to visualize states (e.g., Active vs. Inactive Sidebar tabs, Hover states for buttons).</li>
+                            </ul>
+                        
+                            <p><strong>Visual Exploration:</strong></p>
+                            <ul>
+                                <li>Designed specific modules for user needs: A "70/30 Split" Calendar for exam prioritization and a "Crochet Studio" widget to visualize hobby tracking.</li>
+                            </ul>
+                        
+                            <h4>Tools Used</h4>
+                            <p><strong>Figma:</strong> Main interface design and prototyping.</p>
+                            <p><strong>Trello:</strong> Used to simulate professional workflow, tracking tasks from "To Do" to "Done".</p>
+                            <p><strong>Link to Project:</strong><a href="https://www.figma.com/design/q6eYuzc2DbxPqO7qhWK7e5/WPL-Dashboard-CV-Jameson?node-id=0-1&t=5EeMVAD4jdqLcPqR-1"> Figma</a></p>
+                        </div>
+                    </article>
+                
+                    <article class="project-card">
+                        <div class="card-header">
+                            <span class="tag pink">Personal</span>
+                            <span class="tag-date">Freelance Website</span>
+                        </div>
+                        <h3>EOS Certification Website</h3>
+                        <p class="project-desc">A digital certification hub for EOSCert Belgium streamlining quote requests and public certificate verification.</p>
+                        <div class="project-meta">
+                            <strong>My Role:</strong> Full Stack Developer & UI Designer<br>
+                            <strong>Tech:</strong> Angular 19, Firebase, Google reCAPTCHA, etc.<br>
+                            <strong>Outcome:</strong> Automated quote generation and simplified certificate validation, significantly reducing administrative overhead.
+                        </div>
+
+                        <button class="details-btn">View Details</button>
+
+                        <div class="project-details-source" style="display: none;">
+                            <h2>EOS Certification Website</h2>
+                            <img src="/images/Eoscert Website.png" class="modal-img" alt="Website Preview">
+
+                            <h4>The Concept</h4>
+                            <p><strong>EOSCert Belgium</strong> is a comprehensive certification management platform designed to handle the certification processes for EOS standards. The primary interface is for companies and the public. It serves as an informational hub and a functional tool for requesting quotes, submitting complaints, and verifying certificates.</p>
+                            
+                            <h4>Key Features</h4>
+                            <h4>Public Portal:</h4>
+                            <ul>
+                                <li><strong>Dynamic Quote Request Engine:</strong> A complex, multi-step form that captures detailed organizational data (standards, audit scope, employee counts). Upon submission, the backend dynamically generates a formatted Microsoft Word (`.docx`) document containing all the data and emails it to the administration for review.</li>
+                                <li><strong>Certificate Verification:</strong> A public tool that allows anyone to verify the validity of a certificate. Users can scan a QR code. The system validates this against the database and returns the certificate status, ensuring transparency and trust.</li>
+                                <li><strong>Contact & Complaint Management:</strong> Dedicated forms for general inquiries and formal complaints. These forms are protected by reCAPTCHA and trigger immediate email notifications to the support team.</li>
+                                <li><strong>Internationalization:</strong> The site is built with multi-language support in mind, utilizing `Transloco` to serve content in different languages.</li>
+                            </ul>
+
+                            <h4>Backend Infrastructure</h4>
+                            <ul>
+                                <li><strong>Server-Side Rendering (SSR) with CSP:</strong> The application is served via a Cloud Function that injects a strict, nonce-based Content Security Policy (CSP) into the `index.html` at runtime. This provides a high level of security against Cross-Site Scripting (XSS) attacks.</li>
+                                <li><strong>Automated Communication:</strong> Extensive use of transactional emails (via `Nodemailer` and Gmail) to keep all stakeholders informed about application status, quotes, and inquiries.</li>
+                            </ul>
+
+                            <h4>Technology</h4>
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li><strong>Framework:</strong> Angular 19</li>
+                                <li><strong>Hosting:</strong> Firebase Hosting</li>
+                                <li><strong>State & Async management:</strong> RxJS</li>
+                                <li><strong>UI/UX Libraries</strong>
+                                    <ul>
+                                        <li><strong>Swiper:</strong> For responsive carousels and sliders.</li>
+                                        <li><strong>Transloco:</strong> For handling translations and internationalization.</li>
+                                        <li><strong>qrcode:</strong> For generating and handling QR codes client-side.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Security:</strong> Google reCAPTCHA v3</li>
+                            </ul>
+
+                            <h4>Backend</h4>
+                            <ul>
+                                <li><strong>Runtime:</strong> Node.js 20</li>
+                                <li><strong>Database:</strong> Cloud Firestore</li>
+                                <li><strong>API Framework:</strong> Firebase Cloud Functions (2nd Gen) using `onRequest` and `onCall` triggers.</li>
+                                <li><strong>Key Libraries:</strong> 
+                                    <ul>
+                                        <li><strong>firebase-admin:</strong> For privileged database operations.</li>
+                                        <li><strong>docx:</strong> For programmatic generation of Word documents.</li>
+                                        <li><strong>nodemailer:</strong> For sending SMTP emails via Gmail.</li>
+                                        <li><strong>axios:</strong> For making external HTTP requests (e.g., reCAPTCHA verification).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <h4>Deployment & Development Tools</h4>
+                            <p><strong>Angular CLI:</strong> For scaffolding, building, and testing the frontend application.</p>
+                            <p><strong>Firebase CLI:</strong> For emulating backend services locally and deploying to production.</p>
+                            <p><strong>ESLint:</strong> For maintaining code quality and enforcing style guidelines.</p>
+                            <p><strong>Link to Project:</strong><a href="https://eoscertbelgium.com"> Eoscert Belgium</a></p>
+                        </div>
+                    </article>
+                
+                    <article class="project-card">
+                        <div class="card-header">
+                            <span class="tag pink">Personal</span>
+                            <span class="tag-date">Freelance Database</span>
+                        </div>
+                        <h3>EOS Certification Database</h3>
+                        <p class="project-desc">Secure NoSQL cloud database architecture managing certification records and administrative workflows.</p>
+                        <div class="project-meta">
+                            <strong>My Role:</strong> Backend & Database Architect<br>
+                            <strong>Tech:</strong> Cloud Firestore, Firebase Console, Firestore Security Rules, etc.<br>
+                            <strong>Outcome:</strong> Delivered a secure, scalable data layer with a user-friendly management UI for non-technical staff.
+                        </div>
+                        <button class="details-btn">View Details</button>
+
+                        <div class="project-details-source" style="display: none;">
+                            <h2>EOS Certification Database</h2>
+                            <img src="/images/Eoscert Database.png" class="modal-img" alt="Database Preview">
+
+                            <h4>The Concept</h4>
+                            <p>The <strong>EOSCert Belgium</strong> platform relies on Cloud Firestore, a scalable NoSQL document database, to manage critical data such as certification records, user applications, and dynamic content. The database is designed to support real-time updates and strict security rules.</p>
+                            
+                            <h4>Data Management Strategy</h4>
+                            <p>The database is architected to handle distinct domains of data while ensuring isolation and performance:</p>
+                            <ul>
+                                <li><strong>Certification Records:</strong> Stores comprehensive details about certified companies and their validity status. This data serves as the single source of truth for the public verification tool.</li>
+                                <li><strong>Admin Onboarding:</strong> Manages the lifecycle of administrator access requests, tracking the status from initial application to final approval or denial.</li>
+                            </ul>
+                            
+                            <h4>Security & Access Control</h4>
+                            <p>Security is enforced via <strong>Firestore Security Rules</strong>, implementing a Role-Based Access Control (RBAC) model:</p>
+                            <ul>
+                                <li><strong>Role-Based Access:</strong> Only users with specific custom claims (`ADMIN`, `OWNER`) can read or write sensitive documents.</li>
+                                <li><strong>Least Privilege:</strong> Public access is completely restricted at the database level. Public data retrieval (e.g., certificate verification) is proxied exclusively through secure Cloud Functions (`getCertificateData`), ensuring no direct client-side access to the DB.</li>
+                            </ul>
+
+                            <h4>Privacy & Compliance (GDPR)</h4>
+                            <p>To adhere to privacy regulations like GDPR, the architecture implements several safeguards:</p>
+                            <ul>
+                                <li><strong>Data Minimization:</strong> Only essential business data is stored. Personal data is limited to what is strictly necessary for certification and contact purposes.</li>
+                                <li><strong>Access Control:</strong> Strict RBAC ensures that only authorized personnel can access sensitive records.</li>
+                                <li><strong>Indirect Access:</strong> Public users cannot query the database directly. All public-facing data is filtered and sanitized by backend Cloud Functions before being returned to the client, preventing accidental exposure of private fields.</li>
+                                <li><strong>Encryption:</strong> Data is encrypted at rest by Google Cloud Platform standards and in transit via HTTPS.</li>
+                            </ul>
+
+                            <h4>Integration & Automation</h4>
+                            <p>The database acts as an event bus for serverless logic:</p>
+                            <ul>
+                                <li><strong>Triggers:</strong> Changes in the 'user-applications' collection (e.g., status change to 'approved') automatically trigger Cloud Functions to create user accounts and send email notifications.</li>
+                                <li><strong>Cloud Functions:</strong> The 'getCertificateData' function queries 'CertificationApplications' to validate certificates based on complex ID parsing logic.</li>
+                            </ul>
+                        </div>
+                    </article>
+                
+                </div>
             </section>
+            
             <section id="special">
 
             </section>
         </main>
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body">
+                    </div>
+            </div>
+        </div>
         <footer></footer>
         <script src="/script.js"></script>
     </body>
