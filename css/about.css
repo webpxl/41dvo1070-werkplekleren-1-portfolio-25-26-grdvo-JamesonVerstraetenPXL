@@ -1,0 +1,61 @@
+#about {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    /*Zelfde spacing en gap als project-card*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.about-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.intro-card {
+    grid-column: span 2;
+}
+
+.info-card {
+    grid-column: span 1;
+}
+
+.motivation-card {
+    grid-column: span 1;
+}
+
+.skills-card {
+    grid-column: span 2;
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Mobiele */
+@media screen and (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-card, .info-card, .motivation-card, .skills-card {
+        grid-column: span 1;
+    }
+}
