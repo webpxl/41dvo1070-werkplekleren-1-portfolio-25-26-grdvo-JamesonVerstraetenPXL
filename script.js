@@ -22,14 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent('/components/header.html', 'header');
     loadComponent('/components/footer.html', 'footer');
 
-
     const modal = document.getElementById("project-modal");
     const modalBody = document.getElementById("modal-body");
     const closeBtn = document.querySelector(".close-modal");
 
     document.addEventListener("click", (e) => {
+        // Hamburger Toggle
+        const hamBtn = e.target.closest("#hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        if (hamBtn && navLinks) {
+            navLinks.classList.toggle("open");
+            hamBtn.classList.toggle("is-active");
+        }
+
+        // Close menu when clicking a nav link
+        if (e.target.closest(".nav-links a")) {
+            navLinks?.classList.remove("open");
+            document.getElementById("hamburger")?.classList.remove("is-active");
+        }
+
+        // Modal Logic
         const btn = e.target.closest(".details-btn");
-        
         if (btn) {
             const card = btn.closest(".project-card");
             const hiddenContent = card.querySelector(".project-details-source");
@@ -51,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Close Modal
+    // Close Modal Logic
     if (closeBtn) {
         closeBtn.onclick = () => {
             modal.style.display = "none";
@@ -59,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    // Close Modal on outside click
     window.onclick = (event) => {
         if (event.target == modal) {
             modal.style.display = "none";

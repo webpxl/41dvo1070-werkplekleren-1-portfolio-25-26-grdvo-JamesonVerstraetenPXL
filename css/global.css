@@ -31,6 +31,10 @@ html, body {
     overflow-x: hidden; 
 }
 
+html {
+    scroll-padding-top: 110px;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-white);
@@ -39,6 +43,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
+    padding-top: 120px;
 }
 
 main {
