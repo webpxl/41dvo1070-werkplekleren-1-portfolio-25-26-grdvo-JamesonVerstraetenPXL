@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/project-card.css">
         <link rel="stylesheet" href="css/modal.css">
         <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/extra.css">
     </head>
     <body>
         <header></header>
@@ -238,9 +239,72 @@
                 </div>
             </section>
 
-            <section id="special">
-
+            <section id="extra">
+                <div class="crochet-showcase">
+                    <h1>Threaded Logic</h1>
+                    <div class="crochet-grid">
+                        <div class="crochet-card intro">
+                            <h3 class="modal-category">Compiled by Hand</h3>
+                            <p>I approach crochet with the same mindset I use for core programming: iterative logic. Just as a "for" loop executes a block of code repeatedly until a condition is met, a crochet pattern relies on repeating specific stitch sequences to build structure. Whether I'm defining a function in JavaScript or working a complex stitch repeat in wool, the goal is the same writing clean, bug-free instructions to achieve a functional output.</p>
+                            <div class="logic-snippet">
+                                <div class="compiler-header">
+                                    <div class="dots"><span></span><span></span><span></span></div>
+                                    <h4 class="code-header">// Loop Logic: Waffle Stitch</h4>
+                                </div>
+                                <div class="code-body">
+                                    <div class="line"><span class="keyword">while</span> (project.isOngoing) {</div>
+                                    <div class="line indent">executeStitch(frontPostDC, 1);</div>
+                                    <div class="line indent">executeStitch(standardDC, 2);</div>
+                                    <div class="line indent">checkTension(); <span class="comment">// Error handling</span></div>
+                                    <div class="line indent"><span class="keyword">if</span> (rowComplete) nextRow();</div>
+                                    <div class="line">}</div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="crochet-card ongoing">
+                            <h3 class="modal-category">Ongoing Project</h3>
+                            <img src="/images/RoseBouquetBlanket.png" alt="Crochet Rose Bouquet Blanket" class="view-full-img">
+                            <h4>Rose Bouquet Blanket</h4>
+                            <p>A blanket in the shape of a rose bouquet when folded, currently in progress recreating.</p>
+                            <span class="tag pink">Blanket</span>
+                        </div>
+                    
+                        <div class="crochet-card gallery">
+                            <h3 class="modal-category">Finished Projects</h3>
+                            <div class="crochet-gallery-grid">
+                                <div class="crochet-item-card">
+                                    <img src="/images/Hornet.jpg" alt="Amigurumi Hornet from Hollow Knight" class="view-full-img">
+                                    <div class="crochet-item-info">
+                                        <h4>Hornet - Hollow Knight</h4>
+                                        <p>An Amigurumi keychain of Hornet from the game Hollow Knight.</p>
+                                        <span class="tag purple">Amigurumi</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="crochet-item-card">
+                                    <img src="/images/Flower Coaster Crochet.png" alt="Flower Basket Coasters" class="view-full-img">
+                                    <div class="crochet-item-info">
+                                        <h4>Flower Basket Coasters</h4>
+                                        <p>Multiple flower baskets which can be used as coasters.</p>
+                                        <span class="tag pink">Coaster</span>
+                                    </div>
+                                </div>
+                            
+                                <div class="crochet-item-card">
+                                    <img src="/images/Christmas bunny.jpg" alt="Textured Scarf" class="view-full-img">
+                                    <div class="crochet-item-info">
+                                        <h4>Christmas Bunny</h4>
+                                        <p>A small bunny in a Christmas hat.</p>
+                                        <span class="tag purple">Amigurumi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
         </main>
         <div id="project-modal" class="modal">
             <div class="modal-content">

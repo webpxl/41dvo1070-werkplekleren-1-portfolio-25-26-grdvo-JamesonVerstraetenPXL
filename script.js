@@ -40,6 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.body.style.overflow = "hidden";
             }
         }
+
+        // Full Image View
+        if (e.target.classList.contains("view-full-img")) {
+            const imgSrc = e.target.src;
+            const imgAlt = e.target.alt;
+            modalBody.innerHTML = `<img src="${imgSrc}" alt="${imgAlt}" style="width:100%; height:auto; border-radius:12px; margin-top: 3rem;">`;
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
     });
 
     // Close Modal

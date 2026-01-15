@@ -1,0 +1,124 @@
+#extra {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.crochet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.crochet-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2rem;
+}
+
+/* Bento Spanning */
+.intro { 
+    grid-column: span 2; 
+}
+.philosophy { 
+    grid-column: span 1; 
+}
+.gallery { 
+    grid-column: span 3; 
+}
+
+/* Showcase Gallery Grid */
+.crochet-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.crochet-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    aspect-ratio: 1 / 1;
+}
+
+.crochet-item-card img,
+.crochet-card.ongoing img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    object-position: center; 
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.view-full-img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.view-full-img:hover {
+    transform: scale(1.02);
+}
+
+.logic-snippet {
+    background: rgba(15, 15, 20, 0.8);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    text-align: left;
+}
+
+.compiler-header {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.dots { 
+    display: flex; gap: 5px; 
+}
+
+.dots span { 
+    width: 8px; height: 8px; border-radius: 50%; background: var(--primary); 
+}
+
+.code-body { 
+    padding: 1.5rem; 
+}
+
+.line {
+    color: #e0e0e0;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.indent { 
+    padding-left: 1.5rem; 
+}
+
+/* Syntax Highlighting */
+.keyword { 
+    color: #BB86FC; font-weight: bold; 
+}
+.comment { 
+    color: #888; font-style: italic; 
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 900px) {
+    .crochet-grid, .crochet-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .intro, .philosophy, .gallery {
+        grid-column: span 1;
+    }
+}
