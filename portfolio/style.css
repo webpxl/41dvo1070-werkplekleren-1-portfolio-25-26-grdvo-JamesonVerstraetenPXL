@@ -1,0 +1,84 @@
+.portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    color: var(--text-grey);
+}
+
+/* Documents */
+.download-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 1.25rem;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.download-btn:hover {
+    border-color: var(--accent);
+    background: rgba(255, 117, 151, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-text strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--primary), transparent);
+    margin: 4rem 0;
+    opacity: 0.5;
+}
+
+
+/* Document Content */
+
+.aim-point, .x-factor-point, .role-item, .qa-item {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--primary);
+}
+
+.aim-point h4, .x-factor-point h4, .role-item h4, .qa-item h4 {
+    color: var(--accent); 
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+
+/* Kernkwadranten Container */
+.quadrant-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.quadrant-block {
+    background: var(--glass-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+}
+
+.quadrant-block strong {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .download-grid, .quadrant-container {
+        grid-template-columns: 1fr;
+    }
+}
